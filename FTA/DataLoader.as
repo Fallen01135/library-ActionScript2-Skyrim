@@ -47,10 +47,17 @@ class SKYB.DataLoader
 	static function load(filePath: String, onComplete: Function, useCache: Boolean, extraData: Object, onError: Function, progressCallback: Function): Void
 	{
 		// Fallbacks for optional parameters
-		if (useCache == undefined) useCache = true;
-		if (extraData == undefined) extraData = null;
-		if (onError == undefined) onError = null;
-		if (progressCallback == undefined) progressCallback = null;
+		if (useCache == undefined)
+			useCache = true;
+
+		if (extraData == undefined)
+			extraData = null;
+
+		if (onError == undefined)
+			onError = null;
+
+		if (progressCallback == undefined)
+			progressCallback = null;
 
 		var cb = onComplete;
 		var err = onError;
@@ -86,20 +93,25 @@ class SKYB.DataLoader
 			if (parsed == undefined)
 			{
 				logError("Error while parsing: " + filePath);
-				if (err != null) err("Error while parsing: " + filePath);
-					return;
+				if (err != null)
+					err("Error while parsing: " + filePath);
+
+				return;
 			}
 
 			_cache[filePath] = parsed;
 
 			// Optional: Report progress
-			if (progress != null) progress(100);
+			if (progress != null)
+				progress(100);
 
-			if (cb != null) cb(parsed, extraData);
+			if (cb != null)
+				cb(parsed, extraData);
 		};
 
 		// Report progress (for example, 50% after the start)
-		if (progress != null) progress(50);
+		if (progress != null)
+			progress(50);
 
 		loader.load(filePath);
 	}
@@ -111,9 +123,12 @@ class SKYB.DataLoader
 		var ext: String = filePath.substr(filePath.lastIndexOf(".") + 1).toLowerCase();
 		switch (ext)
 		{
-			case "ini": return INI.parse;
-			case "json": return JSON.parse;
-			default: return null;
+			case "ini":
+				return INI.parse;
+			case "json":
+				return JSON.parse;
+			default:
+				return null;
 		}
 	}
 
