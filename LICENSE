@@ -1,0 +1,60 @@
+===============================================================================
+LICENSE AND TERMS OF USE (PROPRIETARY / MIXED)
+===============================================================================
+Project: ActionScript2-Skyrim
+Copyright (c) 2026 Fallen011[35]
+All rights reserved (except for third-party framework components).
+
+-------------------------------------------------------------------------------
+1. PROTECTED DIRECTORIES & CUSTOM SOURCE CODE
+-------------------------------------------------------------------------------
+All custom ActionScript 2 (AS2) files, source code logic, classes, and assets 
+uniquely created by the author for this project are PROPRIETARY.
+
+This proprietary protection applies explicitly to the following directories 
+within this repository, as well as ANY other custom code created by the author 
+in this project, even if not listed here:
+
+Protected Directories/Files:
+* /SKYB/ (All custom code, library files, classes, and sub-folders)
+
+-------------------------------------------------------------------------------
+2. PERMISSIONS & EXCEPTIONS
+-------------------------------------------------------------------------------
+* Code Usage & Learning: You are explicitly permitted to study the source code, 
+  learn from it, and use logic or short code snippets for your own unique, 
+  independent projects. 
+* Blunt copy-pasting ("forking" or cloning) of large portions or the entire 
+  codebase into another project is strictly prohibited.
+
+-------------------------------------------------------------------------------
+3. RESTRICTIONS
+-------------------------------------------------------------------------------
+* No Modified Re-Uploads: You are NOT allowed to modify the original files 
+  (including `.as` source files) and re-upload or distribute them as a 
+  standalone project, framework, or library under your own name. 
+* If you wish to fix bugs, optimize performance, or add features to this 
+  project, please submit a Pull Request to the official repository or contact 
+  the author directly.
+
+-------------------------------------------------------------------------------
+4. THIRD-PARTY COMPONENTS & DEPENDENCIES
+-------------------------------------------------------------------------------
+Any standard Adobe ActionScript 2 intrinsic classes (e.g., MovieClip, Array),
+Scaleform GFx or native Bethesda/SkyUI UI framework definitions that this project
+interfaces with are excluded from this license and remain property of their
+respective rightsholders.
+
+The proprietary restrictions apply ONLY to the unique, custom work written 
+by the author.
+
+-------------------------------------------------------------------------------
+5. MODPACKS & INDIVIDUAL REQUESTS
+-------------------------------------------------------------------------------
+Inclusion of this project in curated modlists (e.g., Wabbitjack lists, Nexus 
+Collections) is permitted, provided that the files are downloaded directly 
+from their official hosting source.
+
+Anything not explicitly permitted above is prohibited by default. If you have 
+a specific use case or project idea that is not covered here, please reach out. 
+Custom permissions can be granted individually upon consultation.
