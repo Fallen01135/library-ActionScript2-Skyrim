@@ -1,4 +1,4 @@
-﻿class SKYB.TextInput extends gfx.controls.TextArea
+﻿class FTA.TextInput extends gfx.controls.TextArea
 {
 	function TextInput()
 	{

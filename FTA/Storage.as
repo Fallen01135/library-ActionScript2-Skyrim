@@ -1,20 +1,20 @@
-class SKYB.Storage
+class FTA.Storage
 {
 	static function save(slot: Number, data: Array): Void
 	{
 		var payload: String = data.join("|");
-		skse.SendModEvent("SKYBSaveData", payload, slot);
+		skse.SendModEvent("SaveData", payload, slot);
 	}
 
 	static function load(slot: Number, menuName: String, callbackPath: String): Void
 	{
 		var callString: String = menuName + "," + callbackPath;
-		skse.SendModEvent("SKYBLoadData", callString, slot);
+		skse.SendModEvent("LoadData", callString, slot);
 	}
 
 	static function clear(slot: Number): Void
 	{
-		skse.SendModEvent("SKYBClearData", "", slot);
+		skse.SendModEvent("ClearData", "", slot);
 	}
 
 	static function parseCSV(payload: String, type: String): Array

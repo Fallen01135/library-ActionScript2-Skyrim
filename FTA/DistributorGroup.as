@@ -1,7 +1,7 @@
-import SKYB.Distributor;
+import FTA.Distributor;
 
 
-class SKYB.DistributorGroup extends gfx.core.UIComponent
+class FTA.DistributorGroup extends gfx.core.UIComponent
 {
 	var allDistributors: Array = [];
 	var allValueInc: Array = [];

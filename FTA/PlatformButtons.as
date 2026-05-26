@@ -2,7 +2,7 @@
 import Shared.Proxy;
 import Shared.ButtonChange;
 
-class SKYB.PlatformButtons extends SKYB.ButtonHTML
+class FTA.PlatformButtons extends FTA.ButtonHTML
 {
 	var ButtonArt: MovieClip;
 	var ButtonArt_mc: MovieClip;

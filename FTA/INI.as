@@ -1,4 +1,4 @@
-class SKYB.INI
+class FTA.INI
 {
 	public static function parse(text: String): Object
 	{
@@ -14,7 +14,7 @@ class SKYB.INI
 		{
 			var rawLine: String = lines[i];
 			var line: String = rawLine.split("\r").join("");
-			var trimmed: String = SKYB.INI.trim(line);
+			var trimmed: String = FTA.INI.trim(line);
 
 			if (!inMultiline && (trimmed.length == 0 || trimmed.indexOf(";") == 0 || trimmed.indexOf("#") == 0 || trimmed.indexOf("//") == 0))
 				continue;
@@ -22,7 +22,7 @@ class SKYB.INI
 			if (!inMultiline && trimmed.indexOf("=\"\"\"") > -1)
 			{
 				var eqIndex: Number = trimmed.indexOf("=");
-				multilineKey = SKYB.INI.trim(trimmed.substring(0, eqIndex));
+				multilineKey = FTA.INI.trim(trimmed.substring(0, eqIndex));
 				multilineValue = trimmed.substring(eqIndex + 4) + "\n"; // skip ="""
 				inMultiline = true;
 				continue;
@@ -33,7 +33,7 @@ class SKYB.INI
 				if (trimmed.indexOf("\"\"\"") > -1)
 				{
 					multilineValue += trimmed.substring(0, trimmed.indexOf("\"\"\""));
-					multilineValue = SKYB.INI.decodeEscapes(multilineValue);
+					multilineValue = FTA.INI.decodeEscapes(multilineValue);
 
 					if (currentSection != null)
 						result[currentSection][multilineKey] = multilineValue;
@@ -61,9 +61,9 @@ class SKYB.INI
 			var eqIndex: Number = trimmed.indexOf("=");
 			if (eqIndex > -1)
 			{
-				var key: String = SKYB.INI.trim(trimmed.substring(0, eqIndex));
-				var value: String = SKYB.INI.trim(trimmed.substring(eqIndex + 1));
-				value = SKYB.INI.decodeEscapes(value);
+				var key: String = FTA.INI.trim(trimmed.substring(0, eqIndex));
+				var value: String = FTA.INI.trim(trimmed.substring(eqIndex + 1));
+				value = FTA.INI.decodeEscapes(value);
 
 				if (currentSection != null)
 					result[currentSection][key] = value;

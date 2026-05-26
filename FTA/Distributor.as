@@ -1,11 +1,11 @@
 import gfx.controls.Button;
-import SKYB.Utility;
-import SKYB.Colour;
+import FTA.Utility;
+import FTA.Colour;
 import mx.utils.Delegate;
 import skyui.util.Translator;
 
 
-class SKYB.Distributor extends gfx.core.UIComponent
+class FTA.Distributor extends gfx.core.UIComponent
 {
 	var Right: Button;
 	var Left: Button;

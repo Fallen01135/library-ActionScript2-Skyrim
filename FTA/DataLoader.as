@@ -1,5 +1,5 @@
-import SKYB.INI;
-import SKYB.JSON;
+import FTA.INI;
+import FTA.JSON;
 
 
 /*
@@ -8,7 +8,7 @@ import SKYB.JSON;
 
 	DataLoader.load
 	(
-		"ConfigFiles/SKYBUIConfig.ini",
+		"ConfigFiles/UIConfig.ini",
 		Delegate.create(this, onLoadComplete),
 		true,
 		null,
@@ -32,7 +32,7 @@ import SKYB.JSON;
 */
 
 
-class SKYB.DataLoader
+class FTA.DataLoader
 {
 	static var _cache: Object = {};
 	static var _logger: Function = null;

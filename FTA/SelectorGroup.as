@@ -1,7 +1,7 @@
-import SKYB.Selector;
+import FTA.Selector;
 
 
-class SKYB.SelectorGroup extends gfx.core.UIComponent
+class FTA.SelectorGroup extends gfx.core.UIComponent
 {
 	var textField: TextField;
 	var valueField: TextField;

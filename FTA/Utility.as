@@ -1,4 +1,4 @@
-﻿class SKYB.Utility
+﻿class FTA.Utility
 {
 	static function getStatIDs(returnID: Boolean): Array
 	{
@@ -21,14 +21,14 @@
 			returnID = true;
 
 		return [
-			returnID ? skyui.defines.Actor.AV_TWOHANDEDSKILLADVANCE : "$SKYBAttributeStrength",
-			returnID ? skyui.defines.Actor.AV_DESTRUCTIONSKILLADVANCE : "$SKYBAttributeIntelligence",
-			returnID ? skyui.defines.Actor.AV_ENCHANTINGSKILLADVANCE : "$SKYBAttributeWillpower",
-			returnID ? skyui.defines.Actor.AV_SNEAKSKILLADVANCE : "$SKYBAttributeAgility",
-			returnID ? skyui.defines.Actor.AV_LIGHTARMORSKILLADVANCE : "$SKYBAttributeSpeed",
-			returnID ? skyui.defines.Actor.AV_HEAVYARMORSKILLADVANCE : "$SKYBAttributeEndurance",
-			returnID ? skyui.defines.Actor.AV_SPEECHCRAFTSKILLADVANCE : "$SKYBAttributePersonality",
-			returnID ? skyui.defines.Actor.AV_PICKPOCKETSKILLADVANCE : "$SKYBAttributeLuck"
+			returnID ? skyui.defines.Actor.AV_TWOHANDEDSKILLADVANCE : "$FTAAttributeStrength",
+			returnID ? skyui.defines.Actor.AV_DESTRUCTIONSKILLADVANCE : "$FTAAttributeIntelligence",
+			returnID ? skyui.defines.Actor.AV_ENCHANTINGSKILLADVANCE : "$FTAAttributeWillpower",
+			returnID ? skyui.defines.Actor.AV_SNEAKSKILLADVANCE : "$FTAAttributeAgility",
+			returnID ? skyui.defines.Actor.AV_LIGHTARMORSKILLADVANCE : "$FTAAttributeSpeed",
+			returnID ? skyui.defines.Actor.AV_HEAVYARMORSKILLADVANCE : "$FTAAttributeEndurance",
+			returnID ? skyui.defines.Actor.AV_SPEECHCRAFTSKILLADVANCE : "$FTAAttributePersonality",
+			returnID ? skyui.defines.Actor.AV_PICKPOCKETSKILLADVANCE : "$FTAAttributeLuck"
 		];
 	};
 
@@ -38,26 +38,26 @@
 			returnID = true;
 
 		return [
-			returnID ? skyui.defines.Actor.AV_MARKSMAN : "$SKYBMarksman",
-			returnID ? skyui.defines.Actor.AV_BLOCK : "$SKYBBlock",
-			returnID ? skyui.defines.Actor.AV_HEAVYARMOR : "$SKYBHeavyArmor",
-			returnID ? skyui.defines.Actor.AV_ONEHANDED : "$SKYBOneHanded",
-			returnID ? skyui.defines.Actor.AV_SMITHING : "$SKYBSmithing",
-			returnID ? skyui.defines.Actor.AV_TWOHANDED : "$SKYBTwoHanded",
+			returnID ? skyui.defines.Actor.AV_MARKSMAN : "$FTAMarksman",
+			returnID ? skyui.defines.Actor.AV_BLOCK : "$FTABlock",
+			returnID ? skyui.defines.Actor.AV_HEAVYARMOR : "$FTAHeavyArmor",
+			returnID ? skyui.defines.Actor.AV_ONEHANDED : "$FTAOneHanded",
+			returnID ? skyui.defines.Actor.AV_SMITHING : "$FTASmithing",
+			returnID ? skyui.defines.Actor.AV_TWOHANDED : "$FTATwoHanded",
 
-			returnID ? skyui.defines.Actor.AV_ALTERATION : "$SKYBAlteration",
-			returnID ? skyui.defines.Actor.AV_CONJURATION : "$SKYBConjuration",
-			returnID ? skyui.defines.Actor.AV_DESTRUCTION : "$SKYBDestruction",
-			returnID ? skyui.defines.Actor.AV_ENCHANTING : "$SKYBEnchanting",
-			returnID ? skyui.defines.Actor.AV_ILLUSION : "$SKYBIllusion",
-			returnID ? skyui.defines.Actor.AV_RESTORATION : "$SKYBRestoration",
+			returnID ? skyui.defines.Actor.AV_ALTERATION : "$FTAAlteration",
+			returnID ? skyui.defines.Actor.AV_CONJURATION : "$FTAConjuration",
+			returnID ? skyui.defines.Actor.AV_DESTRUCTION : "$FTADestruction",
+			returnID ? skyui.defines.Actor.AV_ENCHANTING : "$FTAEnchanting",
+			returnID ? skyui.defines.Actor.AV_ILLUSION : "$FTAIllusion",
+			returnID ? skyui.defines.Actor.AV_RESTORATION : "$FTARestoration",
 
-			returnID ? skyui.defines.Actor.AV_ALCHEMY : "$SKYBAlchemy",
-			returnID ? skyui.defines.Actor.AV_LIGHTARMOR : "$SKYBLightArmor",
-			returnID ? skyui.defines.Actor.AV_LOCKPICKING : "$SKYBLockpicking",
-			returnID ? skyui.defines.Actor.AV_PICKPOCKET : "$SKYBPickpocket",
-			returnID ? skyui.defines.Actor.AV_SNEAK : "$SKYBSneak",
-			returnID ? skyui.defines.Actor.AV_SPEECHCRAFT : "$SKYBSpeechcraft"
+			returnID ? skyui.defines.Actor.AV_ALCHEMY : "$FTAAlchemy",
+			returnID ? skyui.defines.Actor.AV_LIGHTARMOR : "$FTALightArmor",
+			returnID ? skyui.defines.Actor.AV_LOCKPICKING : "$FTALockpicking",
+			returnID ? skyui.defines.Actor.AV_PICKPOCKET : "$FTAPickpocket",
+			returnID ? skyui.defines.Actor.AV_SNEAK : "$FTASneak",
+			returnID ? skyui.defines.Actor.AV_SPEECHCRAFT : "$FTASpeechcraft"
 		];
 	};
 
@@ -147,7 +147,7 @@
 		};
 
 		var msg: String = x + "," + y + "," + cursor.x + "," + cursor.y;
-		skse.SendModEvent("SKYBSetCursorPosition", msg);
+		skse.SendModEvent("SetCursorPosition", msg);
 	}
 
 	static function setGradient(mc: MovieClip, colours: Array, alphas: Array, ratios: Array): Void

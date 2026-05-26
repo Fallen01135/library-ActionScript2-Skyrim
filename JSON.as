@@ -1,4 +1,4 @@
-﻿class SKYB.JSON
+﻿class JSON
 {
 	public static function stringify(arg): String
 	{

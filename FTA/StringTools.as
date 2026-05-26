@@ -1,4 +1,4 @@
-class SKYB.StringTools
+class FTA.StringTools
 {
 	public static function parseBoolStringToObject(inputString: String): Object
 	{

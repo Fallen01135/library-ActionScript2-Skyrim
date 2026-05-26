@@ -1,7 +1,7 @@
-import SKYB.Colour;
+import FTA.Colour;
 
 
-class SKYB.Selector extends gfx.controls.Button
+class FTA.Selector extends gfx.controls.Button
 {
 	var icon: MovieClip;
 	var textField: TextField;
