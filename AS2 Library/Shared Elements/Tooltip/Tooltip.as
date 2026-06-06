@@ -1,4 +1,4 @@
-﻿class Tooltip extends MovieClip
+﻿class Tooltip extends gfx.core.UIComponent
 {
 	var image_mc: MovieClip;
 	var background_mc: MovieClip;
