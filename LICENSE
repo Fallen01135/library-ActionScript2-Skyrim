@@ -15,8 +15,10 @@ This proprietary protection applies explicitly to the following directories
 within this repository, as well as ANY other custom code created by the author 
 in this project, even if not listed here:
 
-Protected Directories/Files:
-* /FTA/ (All custom code, library files, classes, and sub-folders)
+Protected Directories/Files (All Contents):
+* /AS2/FTA/
+* /Shared Elements/
+* /Interface/
 
 -------------------------------------------------------------------------------
 2. PERMISSIONS & EXCEPTIONS
@@ -41,7 +43,7 @@ Protected Directories/Files:
 4. THIRD-PARTY COMPONENTS & DEPENDENCIES
 -------------------------------------------------------------------------------
 Any standard Adobe ActionScript 2 intrinsic classes (e.g., MovieClip, Array),
-Scaleform GFx or native Bethesda/SkyUI UI framework definitions that this project
+Scaleform GFx or native Bethesda framework definitions that this project
 interfaces with are excluded from this license and remain property of their
 respective rightsholders.
 
