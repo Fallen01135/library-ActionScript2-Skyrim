@@ -10,7 +10,19 @@ import FTA.Defines.NavBar;
 
 import FTA.Utility;
 
-
+/**
+ * This is the code for the Navigation Bar element
+ * 
+ * 
+ * Examples:
+ * 
+ * NavBar.tabTypes = {"CustomMenu", "CustomMenu"}
+ * NavBar.tabIdentifiers = {}
+ * NavBar.tabNames = {"Character", "Skills"}
+ * 
+ * NavBar.initButtons();
+ * 
+ */
 class NavigationBar extends gfx.core.UIComponent
 {
 	private var background_mc: MovieClip;
@@ -57,6 +69,12 @@ class NavigationBar extends gfx.core.UIComponent
 
 
 	// Setter and Getter
+	public function get buttons(): Array { return allButtons; }
+	public function get tabs(): Array { return _tabs; }
+
+	// ==============================================================
+	// Required to build the buttons
+	// ==============================================================
 	public function get tabTypes(): Array { return _tabs[0]; }
 	public function set tabTypes(types: Array): Void { _tabs[0] = types; }
 
@@ -65,8 +83,7 @@ class NavigationBar extends gfx.core.UIComponent
 
 	public function get tabNames(): Array { return _tabs[2]; }
 	public function set tabNames(types: Array): Void { _tabs[2] = types; }
-
-	public function get tabs(): Array { return _tabs }
+	// ==============================================================
 
 	public function get active(): Number { return _active; }
 	public function set active(value: Number): Void { _active = value; }
@@ -132,7 +149,7 @@ class NavigationBar extends gfx.core.UIComponent
 	*/
 	// This will create the buttons. This needs to be called at the start of the menu
 	// after all buttons definitions have been defined.
-	public function buildButtons(): Void
+	public function initButtons(): Void
 	{
 		for (var i: Number = 0; i < allButtons.length; i++)
 			allButtons[i].removeMovieClip();
