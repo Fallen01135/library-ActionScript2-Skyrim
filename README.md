@@ -6,7 +6,6 @@
 
 This is an ActionScript 2 Library I use and extend for Skyrim SE.
 
-> [!note] **A Note from the Author**
 > I do not believe in elitism in programming. If you have any questions about my code, licensing or anything else, please do not hesitate to reach out, I am always happy to help! You can contact me via Nexus Mods, Discord, GitHub, or any other platform where I am active. Remember, we all start somewhere, and there are no wrong questions.
 
 ---
