@@ -16,8 +16,8 @@ within this repository, as well as ANY other custom code created by the author
 in this project, even if not listed here:
 
 Protected Directories/Files (All Contents):
-* /AS2/FTA/
-* /Shared Elements/
+* /AS2 Library/lib/FTA/
+* /AS2 Library/Shared Elements/
 * /Interface/
 
 -------------------------------------------------------------------------------

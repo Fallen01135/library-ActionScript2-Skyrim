@@ -55,6 +55,7 @@ class FTA.PlatformButtons extends gfx.controls.Button
 	{
 		if (button == "PS3_A") return "PS3_B";
 		if (button == "PS3_B") return "PS3_A";
+
 		return button;
 	}
 
@@ -70,7 +71,6 @@ class FTA.PlatformButtons extends gfx.controls.Button
 		ButtonArt_mc._width = ButtonArt_mc._height * originalRatio;
 		ButtonArt_mc._y = (_height - ButtonArt_mc._height) / 2;
 
-		// ButtonArt_mc._x -= ButtonArt_mc._width * 2 + 2;
 		ButtonArt_mc._y = (_height - ButtonArt_mc._height) / 2;
 
 		if (ButtonArtSecondary_mc != null)
@@ -91,9 +91,6 @@ class FTA.PlatformButtons extends gfx.controls.Button
 
 	function Reposition(): Void
 	{
-		// if (ButtonArtSecondary_mc != null)
-		// 	ButtonArtSecondary_mc._x = textField._width;
-
 		if (OnTextFieldChanged != undefined)
 			OnTextFieldChanged.call();
 	}
@@ -103,12 +100,7 @@ class FTA.PlatformButtons extends gfx.controls.Button
 		GameDelegate.call("myLog", ["PlatformButtons::SetPlatform"]);
 
 		if (aiPlatform != undefined)
-		{
 			CurrentPlatform = aiPlatform;
-
-			// if (aiPlatform != 0)
-				// textField.textColor = 0xFFFFFF;
-		}
 
 		if (aSwapPS3 != undefined)
 			PS3Swapped = aSwapPS3;
@@ -140,12 +132,14 @@ class FTA.PlatformButtons extends gfx.controls.Button
 				if (PS3Swapped && ButtonChange.PLATFORM_PC_GAMEPAD)
 				{
 					ButtonArt_mc = attachMovie(PS3Button, "ButtonArt", getNextHighestDepth());
+
 					if (XBoxButtonSecondary != null)
 						ButtonArtSecondary_mc = attachMovie(PS3ButtonSecondary, "ButtonArtSecondary", getNextHighestDepth());
 				}
 				else
 				{
 					ButtonArt_mc = attachMovie(XBoxButton, "ButtonArt", getNextHighestDepth());
+
 					if (XBoxButtonSecondary != null)
 						ButtonArtSecondary_mc = attachMovie(XBoxButtonSecondary, "ButtonArtSecondary", getNextHighestDepth());
 				}
@@ -174,6 +168,7 @@ class FTA.PlatformButtons extends gfx.controls.Button
 				GameDelegate.call("myLog", [String(ps3PrimaryButton)]);
 
 				ButtonArt_mc = attachMovie(ps3PrimaryButton, "ButtonArt", getNextHighestDepth()) || attachMovie(PS3Button, "ButtonArt", getNextHighestDepth());
+
 				if (ps3SecondaryButton != null)
 					ButtonArtSecondary_mc = attachMovie(ps3SecondaryButton, "ButtonArtSecondary", getNextHighestDepth()) || attachMovie(PS3ButtonSecondary, "ButtonArtSecondary", getNextHighestDepth());
 		}
