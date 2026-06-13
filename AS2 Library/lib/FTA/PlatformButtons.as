@@ -2,7 +2,7 @@
 import Shared.Proxy;
 import Shared.ButtonChange;
 
-class FTA.PlatformButtons extends FTA.ButtonHTML
+class FTA.PlatformButtons extends gfx.controls.Button
 {
 	var ButtonArt: MovieClip;
 	var ButtonArt_mc: MovieClip;
@@ -39,11 +39,16 @@ class FTA.PlatformButtons extends FTA.ButtonHTML
 		super.onLoad();
 
 		if (_parent.onButtonLoad != undefined)
-		{
 			_parent.onButtonLoad(this);
-		}
 
 		GameDelegate.call("myLog", ["PlatformButtons::onLoad"]);
+	}
+
+	private function draw(): Void
+	{
+		super.draw();
+
+		adjustArtPositioning();
 	}
 
 	function swapPS3Buttons(button: String): String
@@ -80,8 +85,8 @@ class FTA.PlatformButtons extends FTA.ButtonHTML
 
 		textField._x = ButtonArt_mc._width + (ButtonArtSecondary_mc != null ? ButtonArtSecondary_mc._width : 0) + 5;
 
-		textField._width = textField.textWidth + 10;
-		border._width = textField.textWidth + ButtonArt_mc._width + (ButtonArtSecondary_mc != null ? ButtonArtSecondary_mc._width : 0) + 10;
+		textField._width = textField.textWidth + 4;
+		border._width = textField.textWidth + ButtonArt_mc._width + (ButtonArtSecondary_mc != null ? ButtonArtSecondary_mc._width : 0) + 4;
 	}
 
 	function Reposition(): Void
@@ -176,7 +181,7 @@ class FTA.PlatformButtons extends FTA.ButtonHTML
 		adjustArtPositioning();
 		Reposition();
 
-		border._visible = false;
+		border._alpha = 0;
 	}
 
 	function GetArt(): Object

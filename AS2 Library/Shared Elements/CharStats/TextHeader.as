@@ -1,7 +1,7 @@
-import skyui.util.Translator;
+import FTA.Utility;
 
 
-class SKYBTextHeader extends MovieClip
+class TextHeader extends MovieClip
 {
 	var textField: TextField;
 	var lineLeft: MovieClip;
@@ -21,7 +21,7 @@ class SKYBTextHeader extends MovieClip
 	var _textColour: Number = 0x000000; // The colour of the text
 
 
-	function SKYBTextHeader()
+	function TextHeader()
 	{
 		super();
 	}
@@ -136,7 +136,7 @@ class SKYBTextHeader extends MovieClip
 
 		// Set the text
 		textField.html = true;
-		textField.htmlText = Translator.translate(_text);
+		textField.htmlText = Utility.translate(_text);
 
 		// Set the text size
 		var format: TextFormat = new TextFormat();
